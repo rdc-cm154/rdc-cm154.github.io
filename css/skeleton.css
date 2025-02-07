@@ -305,9 +305,9 @@ li {
   margin-bottom: 0rem;
  }
 
- ul.c {
-  list-style: &#10146;
- }
+ul.c {
+  list-style-type: symbols(&#10146);
+   }
 
 
 /* Code
