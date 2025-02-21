@@ -1,127 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raymond DiCecca | Senior Configuration Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Raymond DiCecca :: Configuration Manager, Senior PLM Analyst, Senior
-    Agile PLM Analyst, ECO Analyst, Configuration Management, Document 
-   Control, CMIIC, CMPIC, Remote PLM Analyst, Virtual PLM Analyst, Arena 
-   Cloud PLM</title>
-   <meta name="description" content="Ray DiCecca Configuration Management and Product Lifecycle Management Services" />
-     <meta name="keywords" content="Ray DiCecca, Senior-Level Configuration Manager and Senior PLM Analyst brings 25+ years of experience in Configuration Management, Product Lifecycle Management, Engineering Change Order Analysis, and Document Control. :: Configuration Management, Product Lifecycle Management, Product Data Management, Engineering Change Control, Bill of Materials, Document Control, Documentation Control, Documentation Control Specialist, ECO Analyst, Configuration Management Specialist, Configuration Management Analyst, Senior PLM Analyst, Engineering Change Orders, Deviation, Waiver, Product Structure, Version Control, New Product Introductions, CM, CMII, PLM, PDM, ECO, BOM, NPI, ECC, ECR, AML, RFD, DEV, MRPII ::" />
-  <meta name="author" content="Ray DiCecca" />
-  <meta name="robots" content="index,follow" />
-  
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+        header h1 {
+            margin-bottom: 0.5rem;
+        }
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css" />
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/skeleton.css" />
+        /* Sidebar (Left Column) */
+        .sidebar {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f5f6fa;
+            padding: 1.5rem;
+        }
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+        /* Main Content (Right Column) */
+        .main-content {
+            flex: 2;
+            min-width: 300px;
+            padding: 1.5rem;
+        }
 
+        /* Section Styling */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(76, 161, 206);
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
+
+.smallcaps {
+  font-variant-caps: small-caps;
+}
+
+.small {
+    font-size: .85em;
+  }
+
+.medium {
+    font-size: .95em;
+  }
+
+p.center {
+  text-align: center;
+}
+
+        /* List Styling */
+        ul {
+            list-style-position: relative;
+            margin-left: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;  
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar, .main-content {
+                flex: 1;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <h1>RAYMOND DICECCA, CMIIC, CMPIC</h1>
+        <p>Senior Configuration Manager &#183; <a href="mailto:ray@raydicecca.com">ray@raydicecca.com</a> &#183; (508) 331-8251 &#183; <a href="https://www.linkedin.com/in/raydicecca" target="_blank">www.linkedin.com/in/raydicecca</a></p>
+    </header>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="two-thirds.column" style="margin-top: 5%">
-      <h4 id="top">Raymond DiCecca, CMIIC, CMPIC</h4><hr>
-       <h5>Senior Configuration Manager</h5>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Column -->
+        <aside class="sidebar">
+            <div class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Configuration Management (CM)</li>
+                    <li>Data Management (DM)</li>
+                    <li>Product Lifecycle Management (PLM)</li>
+                    <li>PLM Administration (Arena PLM)</li>
+                    <li>Engineering Change Control</li>
+                    <li>Document Control</li>
+                    <li>Requirements Management flow-down: P.O.'s, Contracts, StatementsOf Work (SOW) and other high-level program documents</li>
+                    <li>System-Level Bill-of-Material/Product Structuring (BoM)</li>
+                    <li>Modular/Configurable BoM Design</li>
+                    <li>New Product Introductions (NPI)</li>
+                    <li>Engineering Change Order (ECO) Analysis → ECR/ECO/MCO/AML/Deviation & Waiver Processing</li>
+                    <li>CDRL, SDRL & DID Management</li>
+                    <li>PCA/FCA Audits</li>
+                </ul>
+            </div>
 
-       <h6>&#10146; <span class="smallcaps">Configuration Management Analyst</span> <br>&#10146; <span class="smallcaps">Senior PLM Analyst/Arena PLM System Administrator</span></h6>
-       <h6><span class="smallcaps">&#171; Hardware | Software | Firmware &#187;</span></h6>
-        
-        <hr>
-      
-       <p>
-        <span class="button"><a href="#About">About</a></span>
-        <span class="button"><a href="#Expertise">Expertise</a></span>
-        <span class="button"><a href="#Accomplishments">Accomplishments</a></span>
-        <span class="button"><a href="#Contact">Contact</a></span>
-        </p>
-    
-       <h6>Over 40+ years experience:<br>
-        - 27+ commercial industry<br>
-        <span class="small tab">&#10551; medical device, &#10551; telecommunications, &#10551; massively-parallel supercomputing, &#10551; computer network, &#10551; optical network, &#10551; network security &#10551; ad tech</span> 
-       <br>
-       <br> 
-        - 13+ aerospace/defense <br>
-        <span class="small tab">&#10551; advanced composite (military radomes/reflectors + tooling and fixtures)</span>
-        </h6>
+            <div class="section">
+                <h2>Collaboration/Productivity Tools:</h2>
+                <ul>
+                    <li>Office 365</li>
+                    <li>Arena Cloud PLM</li>
+                    <li>Rootstock ERP</li>
+                    <li>Slack</li>
+                    <li> Atlassian Cloud (Confluence, Jira)</li>
+                    <li>Smartsheet</li>
+                    <li>MS-Teams</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <p><strong>M.S. Administrative Studies</strong></p>
+                <p>Boston College</p>
+                <p>1996 - 1998</p>
+                <p><strong>B.A. Management <em>(cum laude)</em></strong></p>
+                <p>Boston College</p>
+                <p>1989-1995</p>
+            </div>
+
+            <div class="section">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>CMIIC (1995)</li>
+                    <li>CMPIC (2009)</li>
+                </ul>
+            </div>
 
 
+        </aside>
 
-        
-       <h6>Degreed (B.A., M.Sc.) + Professional Certifications:
-        <br>- <a href="https://www.ipxhq.com/" target="_blank">CMIIC</a>
-        <br>- <a href="https://www.cmpic.com/" target="_blank">CMPIC</a>
-        <h6>Conversant with CM & Quality Standards/Guidelines:
-          <br>- <a href="https://en.wikipedia.org/wiki/AS9100" target="_blank">AS9100</a>/<a href="https://en.wikipedia.org/wiki/ISO_9000_family" target="_blank">ISO9001</a>
-          <br>- <a href="https://en.wikipedia.org/wiki/EIA-649_National_Consensus_Standard_for_Configuration_Management" target="_blank">ANSI/EIA-649</a>
-          <br>- <a href="https://en.wikipedia.org/wiki/ISO_10007" target="_blank">ISO 10007</a>
-          <br>- <a href="http://everyspec.com/MIL-STD/MIL-STD-0900-1099/MIL_STD_973_1146/" target="_blank">MIL-STD-973</a>
-          <br>- <a href="http://everyspec.com/MIL-HDBK/MIL-HDBK-0001-0099/MIL-HDBK-61B_56174/" target="_blank">MIL-HDBK-61B</a>
-          <br>- <a href="https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodi/500097p.PDF?ver=bePIqKXaLUTK_Iu5iTNREw%3d%3d" target="_blank">DoD Instruction 5000.97</a>
-        </h6>
-        <p><hr>
-          <h6 id="About">&#167; About</h6>
-       <p>Hands-on <span class="smallcaps"><a href="https://en.wikipedia.org/wiki/Configuration_management" target="_blank">Configuration Management</a></span>, <span class="smallcaps"><a href="https://en.wikipedia.org/wiki/Product_lifecycle" target="_blank">Product Lifecycle Management</a></span>, and <span class="smallcaps"><a href="https://en.wikipedia.org/wiki/Document_controller" target="_blank">Document Control</a></span> professional with expertise applying documentation and engineering change control management disciplines to products in the <strong><em>medical device</em></strong>, <strong><em>telecommunication</em></strong>, <strong><em>massively-parallel super-computing</em></strong>, <strong><em>computer network</em></strong>, <strong><em>optical network</em></strong>, <strong><em>network security</em></strong>, <strong><em>advanced composite</em></strong>, <strong><em>defense/aerospace</em></strong>, and <strong><em>ad tech</em></strong> <u>industries</u>. (Granted SECRET Clearance: currently inactive)</p>
-       <p>Expertise in electronic product data management/product lifecycle management (PDM/PLM) – Oracle/Agile & <a href="https://www.arenasolutions.com/platform/plm/" target="_blank">Arena PLM</a> and other automated release tools/scripts, version control, bill-of-material (BoM) product structuring – (both hierarchical and modular) in MRPII/ERP environments, engineering change order (ECO) process execution, analysis, and database management, new product introductions (NPI), and sustaining engineering efforts.</p>
-       <p>Successful at documenting, releasing, and managing large, technically complex systems in hi-volume R&D and production environments using a <a href="https://en.wikipedia.org/wiki/Systems_engineering" target="_blank">systems engineering</a> approach.</p><a href="#Top">Top &#10548;</a>
-<hr>
-       <h6 id="Expertise">&#167; Core Competencies/Areas of Expertise</h6>
-      <ul class="small">
-        <li>Configuration Management (CM)</li>
-        <li>Data Management (DM)</li>
-        <li>Product Lifecycle Management (PLM)/Administration</li>
-        <li>Engineering Change Control</li>
-        <li>Document Control</li>
-        <li>Requirements Management flow-down: P.O.'s, → Contracts, → StatementsOf Work (SOW) and other high-level program documents</li>
-        <li>System-Level Bill-of-Material/Product Structuring (BoM)</li>
-        <li>Modular/Configurable BoM Design</li>
-        <li>New Product Introductions</li>
-        <li>Engineering Change Order (ECO) Analysis → ECR/ECO/MCO/AML/Deviation & Waiver Processing</li>
-        <li>CDRL, SDRL & DID Management</li>
-        <li>PCA/FCA Audits</li>
-        </ul><a href="#Top">Top &#10548;</a>
-        <p></p>
-        <h6 id="Accomplishments">&#167; Selected Accomplishments</h6>
-      <ul style="list-style-type: '&#10146; ';">
-        <li><strong><span class="smallcaps">Partnered with senior leadership in designing and implementing Configuration Management strategies</span></strong> across numerous defense, aerospace, and commercial programs.</li>
-        <li><strong><span class="smallcaps">Implemented leading PLM Solutions</span></strong> to promote/facilitate configuration management and change management efficiencies across the organization and supply-chain.</li>
-        <li><strong><span class="smallcaps">Led ERP system implementation data migration</span></strong> efforts and the import/design of structured bill-of-materials.</li>
-        <li><strong><span class="smallcaps">Awarded Configuration Management Plan approvals</span></strong> on first-pass CDRL/SDRL submittals to prime defense
-          contractors (Boeing, Raytheon, et. al.) and the NAVY.</li>
-        </ul>
-        <a href="#Top">Top &#10548;</a>
-        <p></p>
-<hr>
-       <img class="right" src="images/IMG_5543.JPG" width="50" height="50"  alt="Ray DiCecca - LinkedIn Profile">
-       <h6 id="Contact">Contact Me: <a href="mailto:ray@raydicecca.com">Ray DiCecca</a> 📩<br>
-        LinkedIn: <a href="https://www.linkedin.com/in/raydicecca" target="_blank">Ray's LinkedIn Profile</a> <img src="images/external-link-icon-w-arrow-and-box-where-you-know-youre-going-to-be-leaving-website-935578086.jpg" width="18" height="18" alt="Go to LinkedIn"></p>
-        <hr><span class="footer">&copy; 2025. Ray DiCecca - raydicecca.com | All Rights Reserved.</span></h6>
-        
-      </div>
+        <!-- Right Column -->
+        <main class="main-content">
+            <div class="section">
+                <h2>Professional Summary</h2>
+                <p>Hands-on <span class="smallcaps">Configuration Management</span>, <span class="smallcaps">Product Lifecycle Management</span>, and <span class="smallcaps">Document Control</span> professional with expertise applying documentation and engineering change control management disciplines to products in the medical device, telecommunication, massively-parallel super-computing, computer network, optical network, network security, advanced composite, defense/aerospace, and ad tech industries. (Granted SECRET Clearance: currently inactive)</p><br>
+
+                <p>Expertise in electronic product data management/product lifecycle management (PDM/PLM) – Oracle/Agile & Arena PLM and other automated release tools/scripts, version control, bill-of-material (BoM) product structuring – (both hierarchical and modular) in MRPII/ERP environments, engineering change order (ECO) process execution, analysis, and database management, new product introductions (NPI), and sustaining engineering efforts.</p><br>
+                    
+                <p>Successful at documenting, releasing, and managing large, technically complex systems in hi-volume R&D and production environments using a systems engineering approach.</p><br>
+
+                <p class="center medium"><em>Conversant with CM & Quality Standards/Guidelines:</em> <br>
+                    AS9100/ISO9001 ♦ ANSI/EIA-649 ♦ ISO 10007 ♦ MIL-STD-973 ♦ MIL-HDBK-61B ♦ DoD Instruction 5000.97</p>
+            </div>
+
+            <div class="section">
+                <h2>Selected Accomplishements</h2>
+                <ul class="medium">
+                    <li><strong><em>Partnered with senior leadership in designing and implementing Configuration Management strategies</strong> across numerous defense, aerospace, and commercial programs.</li>
+                    <li><strong>Implemented leading PLM Solutions</strong> to promote/facilitate configuration management and change management efficiencies across the organization and supply-chain.</li>
+                    <li><strong>Led ERP system implementation data migration</strong> efforts and the import/design of structured bill-of-materials.</li>
+                    <li><strong>Awarded Configuration Management Plan approvals</strong> on first-pass CDRL/SDRL submittals to prime defense contractors (Boeing, Raytheon, et. al.) and the NAVY.</li>
+                    <li><strong>Singularly ran the Configuration Management function</strong> across my last four organizations.</em></li>
+                </ul>
+
+
+            </div>
+
+            <div class="section">
+                <h2>Work Experience</h2>
+                <p><strong><em>Sr. Engineering Configuration Manager/Arena PLM System Administrator</em></strong></p>
+                <p><span class="smallcaps">OUTFRONT Media, Inc. | 2018 - Present</span></p><br>
+                <p>Establishes, administers, and maintains a configuration management system (Arena Solutions Cloud PLM) compliant with regulatory, quality, corporate, and customer requirements (both internal and external). Responsible for the creation and management of all hardware configuration projects and planning – Parts, BoMs,AML/AVL including Change Control (ECRs, ECOs, & Deviations). 
+                    
+                <br><br> 
+                Regulates the change process so that only approved and validated changes are incorporated into product baselines (hardware/software/firmware). Designs, maintains, and monitors Arena/PLM→ERP integration triggers for ERP system reconciliation.</p><br>
+
+                <h4>Key Achievements</h4>
+                <ul class="small">
+                    <li><em>Implemented Arena Solutions PLM (within a 6-month go-live window) to support a 15-year/$1bn contract with NYC MTA and the installation of 50,000 Liveboards (digital advertising/smart media technology displays) across all major markets</li>
+                    <li>Tasked with and authored an ERP selection brief which looked at four potential ERP Cloud & On-Premise solutions to
+                        integrate with Arena PLM. My recommendation – Rootstock Cloud ERP built on the Salesforce Platform – was accepted</li>
+                    <li>ERP Implementation & PLM→ERP Integration Team Member – acting as Configuration Management SME</em></li>
+                </ul>
+
+                <br><hr><br>
+
+                <p><strong><em>Senior Configuration Manager (Senior PLM Analyst)</em></strong></p>
+                <p><span class="smallcaps">CPI Radant Technologies Division, Inc. | 2004 - 2018</span></p><br>
+                <p>Analyzed contractual commitments and customer requirements in order to develop and implement configuration management/product documentation control plans and procedures, which supported numerous defense and commercial programs from the conceptual stage through the life cycle of the products to facilitate change management processes.
+                    
+                <br><br>
+                Managed internal & external requirements – including all CDRL/SDRL submissions/status and Data Item Description (DID) requirements, file deliverables, part number issuance/product documentation sign-offs – ECO and BoM releases into ERP System, and building master configuration lists for radomes, reflectors, and structural composite products for use in high performance airborne, ground based, shipboard and submarine installations. SECRET clearance held for six years.</p><br>
+
+                <h4>Key Achievements</h4>
+                <ul class="small">
+                    <li><em>Established the division's configuration management (CM) environment tailored to EIA-649 with adherence to its AS9100/ISO9001 Quality Management System – in compliance with EAR/ITAR export control regulations</li>
+                    <li>Authored and re-wrote the division's CM policy and procedure guidelines (CM Plan) covering: CM planning and management, identification, change control, status accounting, and auditing</li>
+                    <li>As member of ERP Implementation CoreTeam – helped transition the division away from flat parts lists to fully structured Bills-of-Materials (BoMs) and led the data migration effort</li>
+                    <li>Educated and mentored CM personnel, designers and engineers in the construction of accurate bill-of-material product structures and provide guidance, feedback, and direction from ECO Analysis</li>
+                    <li>Singularly ran the Configuration Management function for over a decade across major defense radome programs (airborne, shipboard, & submarine) and commercial SATCOM radomes</em></li>
+                </ul>
+
+                <br><hr><br>
+
+                <p><strong><em>Senior PLM Analyst (Contract through TAC Worldwide)</em></strong></p>
+                <p><span class="smallcaps">Sycamore Networks | 2004 - 2004</span></p><br>
+                <p>Provided document change control expertise – singularly supporting the company – while incumbent was on leave using electronic data and configuration management tool Agile CM Release 8.5.</p>
+                    
+                <br>
+                Responsible for processing ECOs, Deviations, AML Changes, Stop Ships, PCN Alerts in a complex/hi-volume change control environment.</p><br>
+
+                <h4>Key Achievements</h4>
+                <ul class="small">
+                    <li><em>Processed 200+ changes in a 15 week time-span</em></li>
+                </ul>
+
+                <br><hr><br>
+
+                <p><strong><em>Configuration Manager (Senior PLM Analyst)</em></strong></p>
+                <p><span class="smallcaps">Crossbeam Systems | 2000 - 2003</span></p><br>
+                <p>Managed and administered the Product Documentation Control system for a 60+ person Network Security Startup responsible for writing, analyzing, and implementing all ECOs, creating BoM structures, processing approved manufacturing listings [AMLs] and deviations, and executing data file transfers to external partners and contract manufacturers.</p>
+                <br>
+
+                <h4>Key Achievements</h4>
+                <ul class="small">
+                    <li><em>Implemented a leading product lifecycle management (PLM) solution – Agile Software – and migrated the company's Part Number/AML/BoM/ECO information away from an MS-Access database into a centralized data repository – facilitating information sharing and improved efficiencies with both internal customers and across the supply chain</em></li>
+                </ul>
+                <p class="center medium">###</p>
+            </div>
+        </main>
     </div>
-  </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ray DiCecca | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
