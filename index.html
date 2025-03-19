@@ -27,137 +27,164 @@
 
   
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
 
-        /* Header Styles */
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
+    /* Header Styles */
+    header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+    }
 
-        header h1 {
-            margin-bottom: 0.5rem;
-        }
+    header h1 {
+        margin-bottom: 0.5rem;
+    }
 
-        /* Main Container */
+    /* Main Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Sidebar (Left Column) */
+    .sidebar {
+        flex: 1;
+        min-width: 300px;
+        background-color: #f5f6fa;
+        padding: 1.5rem;
+    }
+
+    /* Main Content (Right Column) */
+    .main-content {
+        flex: 2;
+        min-width: 300px;
+        padding: 1.5rem;
+    }
+
+    /* Section Styling */
+    .section {
+        margin-bottom: 2rem;
+    }
+
+    .section h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Link Styling */
+    a:link, a:visited {
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(76, 161, 206);
+    }
+
+    a:active {
+        color: white;
+    }
+
+    .smallcaps {
+        font-variant-caps: small-caps;
+    }
+
+    .small {
+        font-size: .85em;
+    }
+
+    .medium {
+        font-size: .95em;
+    }
+
+    p.center {
+        text-align: center;
+    }
+
+    /* List Styling */
+    ul {
+        list-style-position: relative;
+        margin-left: 1rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;  
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Responsive Image Styling */
+    .responsive-img {
+        max-width: 100%; /* Ensures image scales down to container width */
+        height: auto;    /* Maintains aspect ratio */
+        display: block;  /* Removes unwanted bottom space */
+        margin: 0 auto;  /* Centers the image */
+    }
+
+    /* Button Styling (optional enhancement) */
+    button {
+        padding: 0.5rem 1rem;
+        background-color: #2c3e50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: rgb(76, 161, 206);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
         }
-
-        /* Sidebar (Left Column) */
-        .sidebar {
+        
+        .sidebar, .main-content {
             flex: 1;
-            min-width: 300px;
-            background-color: #f5f6fa;
-            padding: 1.5rem;
-        }
-
-        /* Main Content (Right Column) */
-        .main-content {
-            flex: 2;
-            min-width: 300px;
-            padding: 1.5rem;
-        }
-
-        /* Section Styling */
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        .section h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* unvisited link */
-a:link {
-  color: white;
-}
-
-/* visited link */
-a:visited {
-  color: white;
-}
-
-/* mouse over link */
-a:hover {
-  color: rgb(76, 161, 206);
-}
-
-/* selected link */
-a:active {
-  color: white;
-}
-
-.smallcaps {
-  font-variant-caps: small-caps;
-}
-
-.small {
-    font-size: .85em;
-  }
-
-.medium {
-    font-size: .95em;
-  }
-
-p.center {
-  text-align: center;
-}
-
-        /* List Styling */
-        ul {
-            list-style-position: relative;
-            margin-left: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;  
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            
-            .sidebar, .main-content {
-                flex: 1;
-                width: 100%;
-            }
+        /* Ensure image stays responsive on smaller screens */
+        .responsive-img {
+            width: 100%; /* Forces full width on mobile */
         }
 
-            /* CSS to make the image responsive */
-            .responsive-img {
-            max-width: 100%;
-            height: auto;
+        /* Adjust button for mobile */
+        button {
+            float: none; /* Remove float on mobile */
+            display: block;
+            margin: 0 auto; /* Center the button */
         }
-    </style>
+    }
+
+    /* Optional: Larger screens adjustment */
+    @media (min-width: 769px) {
+        .responsive-img {
+            max-width: 360px; /* Matches your original width for desktop */
+        }
+    }
+</style>
 </head>
 <body>
     <!-- Header -->
@@ -225,8 +252,12 @@ p.center {
 
             <div class="section">
                 <h2>Industry Experience</h2>
-                <a href="images/sankeymatic_20250319_044349_1800x1200.png" target="_blank"><img src="images/sankeymatic_20250319_053058_1800x1200.png"  width="360" height="200"   alt="SankeyDiagram" /></a><br><br>
-                <a href="images/sankeymatic_20250319_044349_1800x1200.png" target="_blank"><button style="float: right;">Open Larger Image &#10548</button></a>
+                <a href="images/sankeymatic_20250319_044349_1800x1200.png" target="_blank">
+                    <img src="images/sankeymatic_20250319_053058_1800x1200.png" class="responsive-img" alt="SankeyDiagram" />
+                </a><br><br>
+                <a href="images/sankeymatic_20250319_044349_1800x1200.png" target="_blank">
+                    <button style="float: right;">Open Larger Image ⤴</button>
+                </a>
             </div>
 
 
