@@ -16,6 +16,11 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="canonical" href="https://raydicecca.com" />
 
+<!-- Include Font Awesome in your <head> -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,17 +40,85 @@
         font-family: Arial, sans-serif;
     }
 
-    /* Header Styles */
-    header {
-        background-color: #2c3e50;
-        color: white;
-        padding: 2rem;
-        text-align: center;
+/* Updated Header Styles */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem; /* Reduced slightly to fit title */
+    font-size: 2.5rem; /* Keeps name prominent */
+}
+
+/* New Title Styles */
+.header-title {
+    font-size: 1.25rem; /* Smaller than h1, larger than contact text */
+    color: rgba(255, 255, 255, 0.9); /* Slightly muted for hierarchy */
+    margin-bottom: 1rem; /* Space before contact info */
+    font-weight: 300; /* Lighter weight for contrast with name */
+}
+
+.header-contact {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Matches footer spacing */
+    flex-wrap: wrap;
+}
+
+/* Contact Item Styles (shared with footer) */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-item i {
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.contact-item a {
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:link, .contact-item a:visited {
+    color: white;
+}
+
+.contact-item a:hover {
+    color: rgb(76, 161, 206);
+}
+
+.contact-item a:active {
+    color: white;
+}
+
+.contact-item:hover i {
+    color: rgb(76, 161, 206);
+}
+
+/* Responsive Design for Header */
+@media (max-width: 768px) {
+    .header-contact {
+        flex-direction: column;
+        gap: 15px; /* Matches footer mobile spacing */
     }
 
     header h1 {
-        margin-bottom: 0.5rem;
+        font-size: 2rem; /* Slightly smaller on mobile */
+        margin-bottom: 0.75rem; /* Adjusted for title */
     }
+
+    .header-title {
+        font-size: 1.1rem; /* Slightly smaller on mobile */
+        margin-bottom: 1.5rem; /* Extra space before contact on mobile */
+    }
+}
 
     /* Main Container */
     .container {
@@ -122,16 +195,76 @@
         margin-bottom: 0.5rem;  
     }
 
-    /* Footer Styles */
-    footer {
-        background-color: #2c3e50;
-        color: white;
-        text-align: center;
-        padding: 1rem;
-        position: relative;
-        bottom: 0;
-        width: 100%;
+/* Updated Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-item i {
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.contact-item a {
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Ensure link colors match your existing scheme */
+.contact-item a:link, .contact-item a:visited {
+    color: white;
+}
+
+.contact-item a:hover {
+    color: rgb(76, 161, 206);
+}
+
+.contact-item a:active {
+    color: white;
+}
+
+.contact-item:hover i {
+    color: rgb(76, 161, 206);
+}
+
+/* New Copyright Styles */
+.footer-copyright {
+    margin-top: 15px; /* Space between contact items and copyright */
+    font-size: 14px; /* Slightly smaller for hierarchy */
+    color: rgba(255, 255, 255, 0.8); /* Slightly muted white for contrast */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-contact {
+        flex-direction: column;
+        gap: 15px;
     }
+    
+    .footer-copyright {
+        margin-top: 10px; /* Reduced spacing on mobile */
+    }
+}
 
     /* Responsive Image Styling */
     .responsive-img {
@@ -190,8 +323,21 @@
     <!-- Header -->
     <header>
         <h1>RAYMOND DICECCA, CMIIC, CMPIC</h1>
-
-        <p>Senior Configuration Manager &#183; <a href="mailto:ray@raydicecca.com">ray@raydicecca.com</a> &#183; (508) 331-8251 &#183;  <a href="https://www.linkedin.com/in/raydicecca" target="_blank">www.linkedin.com/in/raydicecca</a></p>
+        <p class="header-title">Senior Configuration Manager</p>
+        <div class="header-contact">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:ray@raydicecca.com">ray@raydicecca.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+15083318251">+1 (508) 331-8251</a>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/raydicecca" target="_blank">LinkedIn Profile</a>
+          </div>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -384,9 +530,25 @@
             </div>
         </main>
     </div>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Ray DiCecca | All Rights Reserved</p>
-    </footer>
+<!-- Updated Footer HTML -->
+<footer>
+    <div class="footer-contact">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:ray@raydicecca.com">ray@raydicecca.com</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+15083318251">+1 (508) 331-8251</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/raydicecca" target="_blank">LinkedIn Profile</a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2025 Your Name or Company. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
