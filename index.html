@@ -164,7 +164,7 @@ header h1 {
         margin-bottom: 1rem;
     }
 
-    /* Link Styling */
+    /* Link Styling - header/global */
     a:link, a:visited {
         color: white;
     }
@@ -175,6 +175,28 @@ header h1 {
 
     a:active {
         color: white;
+    }
+
+    /* Reset body links to match normal text color by default (most important fix) */
+body a,
+body a:link,
+body a:visited {
+    color: inherit;          /* ← This pulls the color from the parent element (your body text color) */
+    text-decoration: underline;
+    text-decoration-color: rgba(100, 150, 200, 0.4); /* subtle initial underline – adjust opacity/color as needed */
+    text-underline-offset: 2px;
+}
+
+/* Hover: change to your nice blue (same as header) */
+body a:hover {
+    color: rgb(76, 161, 206);
+    text-decoration-color: rgb(76, 161, 206);
+    text-decoration-thickness: 1px; /* optional – makes hover feel more intentional */
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+body a:active {
+        color: rgb(100, 0, 143);
     }
 
     .smallcaps {
@@ -463,7 +485,8 @@ footer {
             <div class="section">
                 <h2>Professional Experience</h2>
                 <p><strong><em>Sr. Engineering Configuration Manager/Arena PLM System Administrator</em></strong></p>
-                <p><span class="smallcaps">OUTFRONT Media, Inc., Andover, MA | 2018 - Present</span></p><br>
+                <p>
+                <a href="https://www.outfront.com/" target="_blank"> <p><span class="smallcaps">OUTFRONT Media, Inc. <sl-icon name="box-arrow-up-right"></sl-icon></span></a><span class="smallcaps">, Andover, MA | 2018 - Present</span></p><br>
                 <p>Establishes, administers, and maintains a configuration management system (Arena Solutions Cloud PLM) compliant with regulatory, quality, corporate, and customer requirements (both internal and external).
                     
                 <br><br> 
@@ -500,7 +523,7 @@ footer {
                 <br><hr><br>
 
                 <p><strong><em>Senior Configuration Manager (Senior PLM Analyst)</em></strong></p>
-                <p><span class="smallcaps">CPI Radant Technologies Division, Inc., Stow, MA | 2004 - 2018</span></p><br>
+                <a href="https://www.cpii.com/composite-structures/" target="_blank"> <p><span class="smallcaps">CPI Radant Technologies Division, Inc. <sl-icon name="box-arrow-up-right"></sl-icon></span></a><span class="smallcaps">, Stow, MA | 2004 - 2018</span></p><br>
                 <p>Analyzed contractual commitments and customer requirements in order to develop and implement configuration management/product documentation control plans and procedures, which supported numerous defense and commercial programs from the conceptual stage through the life cycle of the products to facilitate change management processes.
                     
                 <br><br>
@@ -627,7 +650,8 @@ footer {
                 <br><hr><br>
 
                 <p><strong><em>Senior PLM Analyst (Contract through TAC Worldwide)</em></strong></p>
-                <p><span class="smallcaps">Sycamore Networks, Chelmsford, MA | 2004 - 2004</span></p><br>
+ <a href="https://www.lightwaveonline.com/business/mergers-acquisitions/article/16665327/sycamore-networks-shutting-down-sells-optical-business-for-1875m" target="_blank"> <p><span class="smallcaps">Sycamore Networks <sl-icon name="box-arrow-up-right"></sl-icon></span></a><span class="smallcaps">, Chelmsford, MA | 2004 - 2004</span></p><br>
+
                 <p>Provided document change control expertise – singularly supporting the company – while incumbent was on leave using electronic data and configuration management tool Agile CM Release 8.5.</p>
                     
                 <br>
@@ -651,7 +675,7 @@ footer {
                 <br><hr><br>
 
                 <p><strong><em>Configuration Manager (Senior PLM Analyst)</em></strong></p>
-                <p><span class="smallcaps">Crossbeam Systems, Concord, MA | 2000 - 2003</span></p><br>
+                 <a href="https://tracxn.com/d/companies/crossbeam-systems/__ZX7kXPyv1S3t3J8E69KHiMdZPpavERKGZjtS1g7c3EY" target="_blank"> <p><span class="smallcaps">Crossbeam Systems <sl-icon name="box-arrow-up-right"></sl-icon></span></a><span class="smallcaps">, Concord, MA | 2000 - 2003</span></p><br>
 
                 <p>Managed and administered the Product Documentation/Configuration Management Control system (Agile Product Collaboration PLM) for a 60+ person Network Security Startup.</p><br>
                     
