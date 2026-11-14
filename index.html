@@ -1,157 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Configuration Management and Product Lifecycle Management Services - Hardware, Software, Firmware. Experienced in both commerical and defense/aerospace industries. Onsite, Hybrid, Remote." />
-    <meta name="keywords" content="Ray DiCecca, Senior-Level Configuration Manager and Senior PLM Analyst brings 40+ years of experience in Configuration Management, Product Lifecycle Management, Engineering Change Order Analysis, and Document Control, Configuration Management, Product Lifecycle Management, Product Data Management, Engineering Change Control, Bill of Materials, Document Control, Documentation Control, Documentation Control Specialist, ECO Analyst, Configuration Management Specialist, Configuration Management Analyst, Senior PLM Analyst, Sr. PLM Analyst, Engineering Change Orders, Deviation, Waiver, Product Structure, Version Control, New Product Introductions, CM, CMII, CMPIC, Arena PLM, Agile PLM, PLM, PDM, ECO, BOM, NPI, ECC, ECR, AML, RFD, DEV, MRPII, Cloud PLM" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raymond DiCecca | Configuration Management & PLM</title>
+  <meta name="description" content="Senior Configuration Management and Product Lifecycle Management specialist. Arena • Agile PLM. Aerospace, Defense, Medical Device.">
+  <style>
+    :root {
+      --navy: #0f1c2e;
+      --navy-mid: #1a2d47;
+      --charcoal: #2d3748;
+      --slate: #4a5568;
+      --light: #f8f9fa;
+      --white: #ffffff;
+      --accent: #2b4c7e;
+      --border: #e2e8f0;
+      --radius: 6px;
+    }
 
-    <title>Raymond DiCecca | Senior Configuration Manager | PLM Analyst</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace/style@1.0.0-beta.1/dist/shoelace.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap');
-        
-        :root {
-            --primary: #0f172a;
-        }
-        body {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-        .heading-font {
-            font-family: 'Playfair Display', sans-serif;
-        }
-        .hero-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
-        }
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-    </style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--charcoal);
+      background: var(--light);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 1.15rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+
+    .logo .separator {
+      font-weight: 400;
+      opacity: 0.55;
+      margin: 0 0.45rem;
+      font-size: 1.05rem;
+    }
+
+    .logo .business {
+      font-weight: 400;
+      opacity: 0.78;
+      font-size: 0.92rem;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      margin-left: 1.75rem;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--navy);
+      color: white;
+      padding: 5rem 0 4.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero .tagline {
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #a0aec0;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      max-width: 640px;
+      color: #cbd5e0;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-block;
+      background: white;
+      color: var(--navy);
+      padding: 0.8rem 1.75rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: #edf2f7;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      color: white;
+      margin-left: 0.9rem;
+    }
+
+    .btn-outline:hover {
+      border-color: white;
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* Sections */
+    section {
+      padding: 4.5rem 0;
+    }
+
+    section h2 {
+      font-size: 1.65rem;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+    }
+
+    .section-lead {
+      font-size: 1.1rem;
+      color: var(--slate);
+      max-width: 620px;
+      margin-bottom: 2.75rem;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+      font-weight: 650;
+    }
+
+    .service-card p {
+      font-size: 0.97rem;
+      color: var(--slate);
+    }
+
+    /* Impact */
+    .impact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .impact-item {
+      background: var(--white);
+      border-left: 4px solid var(--navy);
+      padding: 1.5rem 1.75rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .impact-item h3 {
+      font-size: 1.08rem;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+      font-weight: 650;
+    }
+
+    .impact-item p {
+      color: var(--slate);
+      font-size: 0.97rem;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 1.15rem;
+      color: var(--slate);
+      font-size: 1.02rem;
+    }
+
+    .credentials h3 {
+      font-size: 1.05rem;
+      color: var(--navy);
+      margin-bottom: 1.15rem;
+      font-weight: 650;
+      letter-spacing: 0.01em;
+    }
+
+    .credentials ul {
+      list-style: none;
+    }
+
+    .credentials li {
+      position: relative;
+      padding-left: 1.15rem;
+      margin-bottom: 0.55rem;
+      font-size: 0.97rem;
+      color: var(--slate);
+      line-height: 1.45;
+    }
+
+    .credentials li:last-child {
+      margin-bottom: 0;
+    }
+
+    .credentials li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 5px;
+      height: 5px;
+      background: var(--navy);
+      border-radius: 50%;
+    }
+
+    /* Contact */
+    .contact-section {
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-inner {
+      max-width: 540px;
+    }
+
+    .contact-inner p {
+      color: var(--slate);
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .contact-details {
+      margin-top: 1.75rem;
+      font-size: 1.05rem;
+    }
+
+    .contact-details a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: #a0aec0;
+      padding: 1.75rem 0;
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    /* ========== RESPONSIVE / MOBILE ========== */
+    @media (max-width: 800px) {
+      .container {
+        width: 92%;
+      }
+
+      header {
+        padding: 1rem 0;
+      }
+
+      .logo {
+        font-size: 1.05rem;
+      }
+
+      .logo .business {
+        font-size: 0.85rem;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 3.5rem 0 3.25rem;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .hero .tagline {
+        font-size: 1.15rem;
+        margin-bottom: 1.4rem;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+        margin-bottom: 1.75rem;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.92rem;
+      }
+
+      .btn-outline {
+        margin-left: 0;
+        margin-top: 0.75rem;
+        display: inline-block;
+      }
+
+      section {
+        padding: 3.25rem 0;
+      }
+
+      section h2 {
+        font-size: 1.45rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-lead {
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+      }
+
+      .services-grid {
+        gap: 1.15rem;
+      }
+
+      .service-card {
+        padding: 1.4rem;
+      }
+
+      .impact-item {
+        padding: 1.3rem 1.4rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .credentials {
+        padding-top: 0.25rem;
+      }
+
+      footer {
+        padding: 1.5rem 0;
+      }
+    }
+
+    /* Extra small phones */
+    @media (max-width: 480px) {
+      .container {
+        width: 94%;
+      }
+
+      .hero {
+        padding: 3rem 0 2.75rem;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      section {
+        padding: 2.75rem 0;
+      }
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-200">
+<body>
 
-    <!-- HERO -->
-    <header class="hero-bg min-h-screen flex items-center relative">
-        <div class="max-w-7xl mx-auto px-6 py-24 text-center">
-            <div class="max-w-3xl mx-auto">
-                <p class="text-teal-400 font-medium tracking-widest mb-4">RAYMOND DICECCA, CMIIC, CMPIC</p>
-                <p class="text-teal-600 font-medium tracking-widest mb-4">Configuration Management | Product Lifecycle Management</p>
-                <h1 class="heading-font text-6xl md:text-7xl font-semibold leading-tight mb-6">
-                    Mastering Complexity.<br>Delivering Control.
-                </h1>
-                <p class="text-xl md:text-2xl text-slate-300 mb-10">
-                    Senior Configuration Manager &amp; Product Lifecycle Management Analyst with decades of hands-on leadership across Aerospace &amp; Defense, Medical Device, Telecom, and High-Tech industries.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <sl-button href="/resume" variant="primary" size="large" class="text-lg px-8">
-                        <a href="resume.html" target="_blank">Full Resume</a>
-                    </sl-button>
-                    <sl-button href="#contact" variant="default" size="large" outline class="text-lg px-8">
-                        <a href="mailto:ray@raydicecca.com">Get In Touch</a>
-                    </sl-button>
-                </div>
-                
-                <div class="mt-16 text-sm text-slate-400 flex justify-center gap-8">
-                    <div>SECRET Clearance (Inactive)</div>
-                    <div>25+ Years Leadership</div>
-                    <div>Arena • Agile PLM</div>
-                </div>
-            </div>
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        Raymond DiCecca<span class="separator">·</span><span class="business">RDC Technical Services</span>
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#impact">Selected Work</a>
+        <a href="#about">About</a>
+        <a href="resume.html">Résumé</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Configuration Management &amp;<br>Product Lifecycle Management</h1>
+      <div class="tagline">Senior specialist available for contract and project engagements</div>
+      <p>
+        Decades of hands-on leadership in Configuration Management and PLM across Aerospace &amp; Defense, 
+        Medical Device, and complex regulated industries. I bring disciplined process, proven tools expertise, 
+        and practical execution to organizations that need control without unnecessary overhead.
+      </p>
+      <a href="#contact" class="btn">Discuss an engagement</a>
+      <a href="resume.html" class="btn btn-outline">View full résumé</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2>Areas of Focus</h2>
+      <p class="section-lead">
+        Contract, project, and fractional support delivered through technical staffing partners or directly. 
+        Emphasis on practical, sustainable Configuration Management and PLM outcomes.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Configuration Management</h3>
+          <p>Process architecture, baseline management, change control discipline, and interim CM leadership aligned to EIA-649 and related standards.</p>
         </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            ↓
+        <div class="service-card">
+          <h3>PLM Systems (Arena &amp; Agile)</h3>
+          <p>Implementation support, configuration, administration, and optimization of Arena Cloud and Oracle Agile PLM environments.</p>
         </div>
-    </header>
-
-    <!-- EXPERTISE -->
-    <section class="py-24 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl heading-font text-center mb-16">Configuration Management &amp; PLM Leadership</h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-800 p-8 rounded-2xl card-hover border border-slate-700">
-                    <h3 class="text-teal-400 text-xl mb-4">Product Lifecycle Mastery</h3>
-                    <p class="text-slate-400">End-to-end CM/PLM implementation (Arena Cloud, Oracle Agile): Item + AML/AVL specification and documentation, System-Level BoM/Product structuring, ECO process execution, NPI and Sustaining Engineering support in complex regulated industries.</p>
-                </div>
-                <div class="bg-slate-800 p-8 rounded-2xl card-hover border border-slate-700">
-                    <h3 class="text-teal-400 text-xl mb-4">Systems Engineering Approach</h3>
-                    <p class="text-slate-400">Managing hardware, software, and firmware baselines for large-scale systems in high-volume R&amp;D and production environments.</p>
-                </div>
-                <div class="bg-slate-800 p-8 rounded-2xl card-hover border border-slate-700">
-                    <h3 class="text-teal-400 text-xl mb-4">Standards &amp; Compliance</h3>
-                    <p class="text-slate-400">AS9100/ISO9001, EIA-649, MIL-STD-973, MIL-HDBK-61B, ITAR/EAR. Proven track record building CM systems from the ground up.</p>
-                </div>
-            </div>
+        <div class="service-card">
+          <h3>Engineering Change &amp; Product Structures</h3>
+          <p>ECO/ECR process design and execution, high-volume change management, and complex multi-level BoM structuring.</p>
         </div>
-    </section>
-
-    <!-- INDUSTRIES -->
-    <section class="py-24 bg-slate-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl heading-font text-center mb-4">Industries Served</h2>
-            <p class="text-center text-slate-400 mb-16 max-w-md mx-auto">Proven results across mission-critical sectors</p>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-6">Medical Device</div>
-                <div class="p-6">Aerospace &amp; Defense</div>
-                <div class="p-6">Telecommunications</div>
-                <div class="p-6">Network Security</div>
-                <div class="p-6">Advanced Composites</div>
-                <div class="p-6">Ad Tech / Digital Media</div>
-                <div class="p-6">Supercomputing</div>
-                <div class="p-6">Optical Networks</div>
-            </div>
+        <div class="service-card">
+          <h3>Data &amp; Document Control</h3>
+          <p>Part data integrity, AML/AVL governance, controlled documentation, and reliable release packages for manufacturing and suppliers.</p>
         </div>
-    </section>
-
-    <!-- ACCOMPLISHMENTS -->
-    <section class="py-24 bg-slate-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl heading-font text-center mb-16">Selected Impact</h2>
-            <div class="max-w-3xl mx-auto space-y-12">
-                <div class="border-l-4 border-teal-500 pl-8">
-                    <p class="text-lg">"Implemented Arena PLM from scratch to support a $1B+ contract with NYC MTA — 25 major product systems released on time."</p>
-                    <p class="text-sm text-slate-400 mt-4">— OUTFRONT Media</p>
-                </div>
-                <div class="border-l-4 border-teal-500 pl-8">
-                    <p class="text-lg">Singularly ran Configuration Management for over a decade at CPI Radant Technologies supporting major aerospace & defense radome programs: Awarded Configuration Management Plan approvals on first-pass CDRL/SDRL submittals to prime defense contractors (Boeing, Raytheon, et. al.) and the NAVY.</p>
-                </div>
-                <div class="border-l-4 border-teal-500 pl-8">
-                    <p class="text-lg">Processed 200+ engineering changes in 15 weeks at Sycamore Networks.</p>
-                </div>
-            </div>
-            <div class="text-center mt-16">
-                <sl-button href="/resume" variant="primary" size="large"><a href="https://www.linkedin.com/in/raydicecca" target="_blank">Explore Full Career Achievements →</a></sl-button>
-            </div>
+        <div class="service-card">
+          <h3>Compliance &amp; Deliverables</h3>
+          <p>AS9100/ISO 9001, ITAR/EAR considerations, CDRL/SDRL preparation, and audit-ready configuration practices.</p>
         </div>
-    </section>
-
-    <!-- CTA / CONTACT -->
-    <section id="contact" class="py-24 bg-gradient-to-b from-slate-900 to-slate-950 text-center">
-        <div class="max-w-2xl mx-auto px-6">
-            <h2 class="text-4xl heading-font mb-6">Ready to Strengthen Your Configuration &amp; PLM Processes?</h2>
-            <p class="text-slate-300 mb-10">Let's discuss how proven CM/PLM leadership can reduce risk, accelerate releases, and ensure compliance for your programs.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <sl-button href="mailto:your.email@raydicecca.com" variant="primary" size="large">
-                    <a href="mailto:ray@raydicecca.com">Send Message</a></sl-button>
-                <sl-button href="/resume" variant="default" size="large" outline><a href="resume.html" target="_blank">View Resume</a></sl-button>
-            </div>
+        <div class="service-card">
+          <h3>Early-Stage Hardware Organizations</h3>
+          <p>Establishing foundational CM processes and lightweight PLM structure for hardware teams moving toward production.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="bg-black py-12 text-center text-slate-500 text-sm">
-        <p>&copy; 2026 Raymond DiCecca • Configuration Management | Product Lifecycle Management • All rights reserved.</p>
-    </footer>
+  <!-- Selected Work -->
+  <section id="impact" style="background: var(--white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <h2>Selected Impact</h2>
+      <p class="section-lead">Representative results from complex, regulated environments.</p>
 
-    <script src="https://cdn.jsdelivr.net/npm/@shoelace/style@1.0.0-beta.1/dist/shoelace.min.js"></script>
+      <div class="impact-list">
+        <div class="impact-item">
+          <h3>Arena PLM Implementation — Outfront Media</h3>
+          <p>Directed the full implementation of Arena Cloud PLM in support of a multi-year, $1B+ contract. Delivered product structuring, documentation, and ECO release for 25 major systems, encompassing both new product introduction and sustaining engineering.</p>
+        </div>
+        <div class="impact-item">
+          <h3>Configuration Management Leadership — CPI Radant Technologies</h3>
+          <p>Sole responsibility for Configuration Management across major aerospace and defense radome programs for more than a decade. Established the CM framework to EIA-649 and AS9100 standards, achieving consistent first-pass approval of Configuration Management Plans by prime contractors and the Navy.</p>
+        </div>
+        <div class="impact-item">
+          <h3>High-Volume Change Execution — Sycamore Networks</h3>
+          <p>Provided sole change-control support in a high-velocity environment, processing more than 200 engineering changes within a 15-week period using Agile PLM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>Background</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Raymond DiCecca is a senior Configuration Management and Product Lifecycle Management professional 
+            with more than 35 years of experience leading CM functions and PLM systems in Aerospace &amp; Defense, 
+            Medical Device, telecommunications, and advanced technology environments.
+          </p>
+          <p>
+            His work has centered on building and operating disciplined configuration and product-data processes 
+            that scale with program complexity while remaining usable by engineering and operations teams. 
+            He has repeatedly served as the primary or sole CM authority on major programs.
+          </p>
+          <p>
+            He now provides contract and project-based expertise through RDC Technical Services.
+          </p>
+        </div>
+
+        <div class="credentials">
+          <h3>Credentials &amp; Domain Experience</h3>
+          <ul>
+            <li>CMIIC &amp; CMPIC certified</li>
+            <li>Arena Cloud PLM</li>
+            <li>Oracle Agile PLM</li>
+            <li>AS9100 / ISO 9001</li>
+            <li>EIA-649, MIL-STD-973, MIL-HDBK-61B</li>
+            <li>ITAR / EAR experience</li>
+            <li>SECRET Clearance (inactive)</li>
+            <li>Greater Boston Area</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-inner">
+        <p>
+          Available for contract and project engagements beginning January 2027. 
+          Inquiries from technical staffing firms and direct clients are welcome.
+        </p>
+        <div class="contact-details">
+          <p><strong>Email:</strong> <a href="mailto:ray@raydicecca.com">ray@raydicecca.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/raydicecca" target="_blank" rel="noopener">linkedin.com/in/raydicecca</a></p>
+          <p><strong>Résumé:</strong> <a href="resume.html">View full career history</a></p>
+          <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--slate);">
+            RDC Technical Services<br>
+            Raymond DiCecca, Principal
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      &copy; 2027 Raymond DiCecca · RDC Technical Services · Greater Boston Area
+    </div>
+  </footer>
+
 </body>
 </html>
