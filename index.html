@@ -16,12 +16,18 @@
       --accent: #2b4c7e;
       --border: #e2e8f0;
       --radius: 6px;
+      --header-height: 62px; /* approximate header height */
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--header-height); /* Critical fix for sticky header */
     }
 
     body {
@@ -60,7 +66,7 @@
       color: white;
       text-decoration: none;
       letter-spacing: 0.02em;
-      white-space: nowrap;          /* Prevents wrapping */
+      white-space: nowrap;
     }
 
     .logo .separator {
@@ -477,7 +483,7 @@
   <!-- Header -->
   <header id="top">
     <div class="container header-inner">
-      <a href="#top" class="logo">
+      <a href="#top" class="logo" onclick="scrollToTop(event)">
         Raymond DiCecca<span class="separator">·</span><span class="business">RDC Technical Services</span>
       </a>
 
@@ -499,11 +505,11 @@
 
       <!-- Mobile Navigation -->
       <nav class="mobile-nav" id="mobileNav">
-        <a href="#services" onclick="closeMenu()">Services</a>
-        <a href="#impact" onclick="closeMenu()">Selected Work</a>
-        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#services" onclick="handleNavClick(event)">Services</a>
+        <a href="#impact" onclick="handleNavClick(event)">Selected Work</a>
+        <a href="#about" onclick="handleNavClick(event)">About</a>
         <a href="resume.html" onclick="closeMenu()">Résumé</a>
-        <a href="#contact" onclick="closeMenu()">Contact</a>
+        <a href="#contact" onclick="handleNavClick(event)">Contact</a>
       </nav>
     </div>
   </header>
@@ -559,7 +565,7 @@
         </div>
       </div>
 
-      <a href="#top" class="back-to-top">↑ Back to Top</a>
+      <a href="#top" class="back-to-top" onclick="scrollToTop(event)">↑ Back to Top</a>
     </div>
   </section>
 
@@ -584,7 +590,7 @@
         </div>
       </div>
 
-      <a href="#top" class="back-to-top">↑ Back to Top</a>
+      <a href="#top" class="back-to-top" onclick="scrollToTop(event)">↑ Back to Top</a>
     </div>
   </section>
 
@@ -624,7 +630,7 @@
         </div>
       </div>
 
-      <a href="#top" class="back-to-top">↑ Back to Top</a>
+      <a href="#top" class="back-to-top" onclick="scrollToTop(event)">↑ Back to Top</a>
     </div>
   </section>
 
@@ -648,7 +654,7 @@
         </div>
       </div>
 
-      <a href="#top" class="back-to-top">↑ Back to Top</a>
+      <a href="#top" class="back-to-top" onclick="scrollToTop(event)">↑ Back to Top</a>
     </div>
   </section>
 
@@ -672,6 +678,23 @@
       const mobileNav = document.getElementById('mobileNav');
       hamburger.classList.remove('active');
       mobileNav.classList.remove('active');
+    }
+
+    // Handles mobile nav clicks + closes menu
+    function handleNavClick(e) {
+      closeMenu();
+      // Let the browser handle the smooth scroll with scroll-padding-top
+    }
+
+    // Reliable Back to Top (works on mobile)
+    function scrollToTop(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      // Also update the URL hash cleanly
+      history.replaceState(null, null, '#top');
     }
   </script>
 
