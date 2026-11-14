@@ -60,12 +60,13 @@
       color: white;
       text-decoration: none;
       letter-spacing: 0.02em;
+      white-space: nowrap;          /* Prevents wrapping */
     }
 
     .logo .separator {
       font-weight: 400;
       opacity: 0.55;
-      margin: 0 0.45rem;
+      margin: 0 0.4rem;
       font-size: 1.05rem;
     }
 
@@ -96,6 +97,7 @@
       cursor: pointer;
       padding: 6px;
       z-index: 110;
+      flex-shrink: 0;
     }
 
     .hamburger span {
@@ -129,7 +131,7 @@
       right: 0;
       background: var(--navy);
       border-top: 1px solid rgba(255,255,255,0.1);
-      padding: 1rem 0 1.5rem;
+      padding: 0.5rem 0 1.25rem;
       flex-direction: column;
     }
 
@@ -140,7 +142,7 @@
     .mobile-nav a {
       color: rgba(255,255,255,0.9);
       text-decoration: none;
-      padding: 0.85rem 5%;
+      padding: 0.9rem 5%;
       font-size: 1.05rem;
       font-weight: 500;
       border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -149,6 +151,20 @@
     .mobile-nav a:hover {
       background: rgba(255,255,255,0.05);
       color: white;
+    }
+
+    /* Back to Top link */
+    .back-to-top {
+      display: inline-block;
+      margin-top: 2.5rem;
+      font-size: 0.9rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-to-top:hover {
+      text-decoration: underline;
     }
 
     /* Hero */
@@ -385,6 +401,14 @@
         display: block;
       }
 
+      .logo {
+        font-size: 1.05rem;
+      }
+
+      .logo .business {
+        font-size: 0.84rem;
+      }
+
       .hero {
         padding: 3.5rem 0 3.25rem;
       }
@@ -426,6 +450,14 @@
         width: 94%;
       }
 
+      .logo {
+        font-size: 0.98rem;
+      }
+
+      .logo .business {
+        font-size: 0.8rem;
+      }
+
       .hero {
         padding: 3rem 0 2.75rem;
       }
@@ -443,9 +475,9 @@
 <body>
 
   <!-- Header -->
-  <header>
+  <header id="top">
     <div class="container header-inner">
-      <a href="#" class="logo">
+      <a href="#top" class="logo">
         Raymond DiCecca<span class="separator">·</span><span class="business">RDC Technical Services</span>
       </a>
 
@@ -526,6 +558,8 @@
           <p>Establishing foundational CM processes and lightweight PLM structure for hardware teams moving toward production.</p>
         </div>
       </div>
+
+      <a href="#top" class="back-to-top">↑ Back to Top</a>
     </div>
   </section>
 
@@ -549,6 +583,8 @@
           <p>Provided sole change-control support in a high-velocity environment, processing more than 200 engineering changes within a 15-week period using Agile PLM.</p>
         </div>
       </div>
+
+      <a href="#top" class="back-to-top">↑ Back to Top</a>
     </div>
   </section>
 
@@ -587,6 +623,8 @@
           </ul>
         </div>
       </div>
+
+      <a href="#top" class="back-to-top">↑ Back to Top</a>
     </div>
   </section>
 
@@ -609,6 +647,8 @@
           </p>
         </div>
       </div>
+
+      <a href="#top" class="back-to-top">↑ Back to Top</a>
     </div>
   </section>
 
