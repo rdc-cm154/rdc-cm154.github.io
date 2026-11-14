@@ -51,6 +51,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
 
     .logo {
@@ -74,7 +75,8 @@
       font-size: 0.92rem;
     }
 
-    nav a {
+    /* Desktop Nav */
+    .desktop-nav a {
       color: rgba(255,255,255,0.85);
       text-decoration: none;
       margin-left: 1.75rem;
@@ -82,7 +84,70 @@
       font-weight: 500;
     }
 
-    nav a:hover {
+    .desktop-nav a:hover {
+      color: white;
+    }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      z-index: 110;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: white;
+      margin: 6px 0;
+      transition: all 0.3s ease;
+      border-radius: 1px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Mobile Nav */
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--navy);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 1rem 0 1.5rem;
+      flex-direction: column;
+    }
+
+    .mobile-nav.active {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+      padding: 0.85rem 5%;
+      font-size: 1.05rem;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .mobile-nav a:hover {
+      background: rgba(255,255,255,0.05);
       color: white;
     }
 
@@ -306,26 +371,18 @@
       text-align: center;
     }
 
-    /* ========== RESPONSIVE / MOBILE ========== */
+    /* ========== RESPONSIVE ========== */
     @media (max-width: 800px) {
       .container {
         width: 92%;
       }
 
-      header {
-        padding: 1rem 0;
-      }
-
-      .logo {
-        font-size: 1.05rem;
-      }
-
-      .logo .business {
-        font-size: 0.85rem;
-      }
-
-      nav {
+      .desktop-nav {
         display: none;
+      }
+
+      .hamburger {
+        display: block;
       }
 
       .hero {
@@ -334,22 +391,14 @@
 
       .hero h1 {
         font-size: 1.9rem;
-        margin-bottom: 0.6rem;
       }
 
       .hero .tagline {
         font-size: 1.15rem;
-        margin-bottom: 1.4rem;
       }
 
       .hero p {
         font-size: 1.05rem;
-        margin-bottom: 1.75rem;
-      }
-
-      .btn {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.92rem;
       }
 
       .btn-outline {
@@ -364,41 +413,14 @@
 
       section h2 {
         font-size: 1.45rem;
-        margin-bottom: 1rem;
-      }
-
-      .section-lead {
-        font-size: 1.05rem;
-        margin-bottom: 2rem;
-      }
-
-      .services-grid {
-        gap: 1.15rem;
-      }
-
-      .service-card {
-        padding: 1.4rem;
-      }
-
-      .impact-item {
-        padding: 1.3rem 1.4rem;
       }
 
       .about-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
-
-      .credentials {
-        padding-top: 0.25rem;
-      }
-
-      footer {
-        padding: 1.5rem 0;
-      }
     }
 
-    /* Extra small phones */
     @media (max-width: 480px) {
       .container {
         width: 94%;
@@ -426,12 +448,30 @@
       <a href="#" class="logo">
         Raymond DiCecca<span class="separator">·</span><span class="business">RDC Technical Services</span>
       </a>
-      <nav>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
         <a href="#services">Services</a>
         <a href="#impact">Selected Work</a>
         <a href="#about">About</a>
         <a href="resume.html">Résumé</a>
         <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Hamburger Button -->
+      <button class="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile Navigation -->
+      <nav class="mobile-nav" id="mobileNav">
+        <a href="#services" onclick="closeMenu()">Services</a>
+        <a href="#impact" onclick="closeMenu()">Selected Work</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="resume.html" onclick="closeMenu()">Résumé</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
       </nav>
     </div>
   </header>
@@ -578,6 +618,22 @@
       &copy; 2027 Raymond DiCecca · RDC Technical Services · Greater Boston Area
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const hamburger = document.querySelector('.hamburger');
+      const mobileNav = document.getElementById('mobileNav');
+      hamburger.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      const hamburger = document.querySelector('.hamburger');
+      const mobileNav = document.getElementById('mobileNav');
+      hamburger.classList.remove('active');
+      mobileNav.classList.remove('active');
+    }
+  </script>
 
 </body>
 </html>
